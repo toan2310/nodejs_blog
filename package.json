@@ -1,0 +1,33 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toan2310/nodejs_blog.git"
+  },
+  "keywords": [
+    "toan",
+    "blog",
+    "toan",
+    "nodejs",
+    "ndoejs"
+  ],
+  "author": "toanares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toan2310/nodejs_blog/issues"
+  },
+  "homepage": "https://github.com/toan2310/nodejs_blog#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
