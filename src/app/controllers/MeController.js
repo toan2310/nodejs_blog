@@ -5,9 +5,14 @@ class MeController {
   // [GET] /me/stored/courses
   async storedCourses(req, res, next) {
     try {
-      const coursesRaw = await Course.find().exec();
+      const [courses, deletedCount] = await Promise.all([
+        Course.find().exec(),
+        Course.countDocumentsDeleted(),
+      ]);
+
       res.render("me/stored-courses", {
-        courses: multipleMongooseToObject(coursesRaw),
+        deletedCount,
+        courses: multipleMongooseToObject(courses),
       });
     } catch (err) {
       console.error(err);
